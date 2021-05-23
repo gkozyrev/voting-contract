@@ -1,0 +1,1 @@
+# Voting Solidity smart contract
