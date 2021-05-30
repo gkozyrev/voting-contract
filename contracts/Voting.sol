@@ -262,7 +262,7 @@ contract Voting {
 
         emit CreatePoll(pollsAmount, _title, _question);
 
-        pollsAmount = pollsAmount + 1;
+        pollsAmount += 1;
 
         return pollsAmount;
     }
@@ -328,7 +328,7 @@ contract Voting {
         require(!polls[_pollID].answers[_answerID].voters[msg.sender], "Voting: You have already voted");
 
         polls[_pollID].answers[_answerID].voters[msg.sender] = true;
-        polls[_pollID].answers[_answerID].votes.add(1);
+        polls[_pollID].answers[_answerID].votes += 1;
 
         emit Vote(_pollID, _answerID);
     }

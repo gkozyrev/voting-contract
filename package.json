@@ -1,6 +1,18 @@
 {
   "name": "poll-contract",
   "version": "1.0.0",
+  "scripts": {
+    "test": "truffle test",
+    "build": "truffle compile",
+    "migrate": "truffle migrate",
+    "eslint": "eslint test/",
+    "solium": "solium --dir contracts",
+    "lint": "npm run eslint && npm run solium",
+    "coverage": "node --max-old-space-size=4096 ./node_modules/.bin/truffle run coverage",
+    "deploy:testnet": "truffle deploy --network testnet --reset",
+    "deploy:dev": "truffle deploy --network dev --reset",
+    "deploy:bsc": "truffle deploy --network bsc --reset"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "^4.1.0",
     "@openzeppelin/test-helpers": "^0.5.11",
