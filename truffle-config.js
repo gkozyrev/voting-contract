@@ -20,6 +20,14 @@ module.exports = {
             networkCheckTimeout: 50000000,
             timeoutBlocks: 2000,
         },
+        mainnet: {
+            provider: () => new HDWalletProvider(mnemonic, 'https://bsc-dataseed.binance.org:8545'),
+            network_id: 56,
+            confirmations: 1,
+            skipDryRun: true,
+            networkCheckTimeout: 50000000,
+            timeoutBlocks: 2000,
+        },
     },
     compilers: {
         solc: {
